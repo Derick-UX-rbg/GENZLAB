@@ -1,7 +1,13 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+const MODEL = "gemini-3.8-flash";
+
 export function hasApiKey(): boolean {
   return Boolean(process.env.GEMINI_API_KEY?.trim());
+}
+
+async function sleep(ms: number) {
+  await new Promise((r) => setTimeout(r, ms));
 }
 
 export async function generateJson<T>(opts: {
@@ -14,7 +20,7 @@ export async function generateJson<T>(opts: {
 
   const genAI = new GoogleGenerativeAI(key);
   const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash",
+    model: MODEL,
     systemInstruction: opts.system,
     generationConfig: {
       temperature: opts.temperature ?? 0.85,
@@ -22,9 +28,21 @@ export async function generateJson<T>(opts: {
     },
   });
 
-  const result = await model.generateContent(opts.user);
-  const text = result.response.text();
-  return JSON.parse(text) as T;
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const result = await model.generateContent(opts.user);
+      const text = result.response.text();
+      return JSON.parse(text) as T;
+    } catch (err) {
+      lastErr = err;
+      const msg = err instanceof Error ? err.message : String(err);
+      const retryable = /503|high demand|temporarily|unavailable|429/i.test(msg);
+      if (!retryable || attempt === 2) break;
+      await sleep(800 * (attempt + 1));
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
 
 export function extractJson<T>(text: string): T {
