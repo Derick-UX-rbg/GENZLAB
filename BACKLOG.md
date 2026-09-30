@@ -1,5 +1,12 @@
-# GENZLAB backlog (not built yet)
+# GENZLAB backlog
 
+## Shipped
+- What Do I Say?
+- What Should I Charge?
+- What Can I Hustle?
+- Situationship Translator
+
+## Not built yet
 - What Should I Post? — content ideas for IG/TikTok/Twitter NG
 - Cap Cut Script — short-form video scripts
 - Soft Life Budget — weekly money plan for Gen Z salaries

@@ -35,7 +35,7 @@ export function Nav() {
                     : "text-white/50 hover:bg-white/5 hover:text-white/80"
                 }`}
               >
-                {t.name}
+                {t.shortName || t.name}
               </Link>
             );
           })}
@@ -72,7 +72,7 @@ export function Nav() {
                     : "text-white/70 hover:bg-white/5"
                 }`}
               >
-                {t.name}
+                {t.shortName || t.name}
               </Link>
             ))}
           </div>

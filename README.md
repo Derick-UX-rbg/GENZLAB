@@ -4,11 +4,12 @@ Tiny AI tools for real-life Nigerian problems.
 
 **Money. Hustle. Dating. Content. Life. One problem at a time.**
 
-## MVP tools
+## Tools
 
 1. **What Do I Say?** — paste message + vibe → 3 Nigerian Gen-Z replies
-2. **What Should I Charge?** — pricing estimate + negotiation + ready message
-3. **What Can I Hustle?** — 5 realistic income experiments (no scams)
+2. **Situationship Translator** — decode mixed signals + Soft / Direct / Soft-launch replies
+3. **What Should I Charge?** — pricing estimate + negotiation + ready message
+4. **What Can I Hustle?** — 5 realistic income experiments (no scams)
 
 ## Stack
 

@@ -70,9 +70,36 @@ export interface HustleResponse {
   error?: string;
 }
 
+export type SituationshipReplyVibe = "Soft" | "Direct" | "Soft-launch";
+
+export interface SituationshipRequest {
+  chat: string;
+}
+
+export interface SituationshipFlag {
+  text: string;
+}
+
+export interface SituationshipReply {
+  vibe: SituationshipReplyVibe;
+  text: string;
+  why: string;
+}
+
+export interface SituationshipResponse {
+  read: string;
+  redFlags: string[];
+  greenFlags: string[];
+  replies: SituationshipReply[];
+  mock: boolean;
+  error?: string;
+}
+
+export type ToolId = "say" | "charge" | "hustle" | "situationship";
+
 export interface HistoryItem {
   id: string;
-  tool: "say" | "charge" | "hustle";
+  tool: ToolId;
   title: string;
   preview: string;
   createdAt: number;
@@ -80,9 +107,10 @@ export interface HistoryItem {
 }
 
 export interface ToolMeta {
-  id: "say" | "charge" | "hustle";
+  id: ToolId;
   slug: string;
   name: string;
+  shortName?: string;
   tagline: string;
   description: string;
   accent: string;

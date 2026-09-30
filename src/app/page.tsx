@@ -33,7 +33,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="mt-14 grid gap-4 sm:grid-cols-2">
         {TOOLS.map((tool, i) => (
           <div key={tool.id} className="animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
             <ToolCard tool={tool} />
