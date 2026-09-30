@@ -29,7 +29,7 @@ export async function generateJson<T>(opts: {
   });
 
   let lastErr: unknown;
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (let attempt = 0; attempt < 4; attempt++) {
     try {
       const result = await model.generateContent(opts.user);
       const text = result.response.text();
@@ -39,7 +39,7 @@ export async function generateJson<T>(opts: {
       const msg = err instanceof Error ? err.message : String(err);
       const retryable = /503|high demand|temporarily|unavailable|429/i.test(msg);
       if (!retryable || attempt === 2) break;
-      await sleep(800 * (attempt + 1));
+      await sleep(1200 * (attempt + 1));
     }
   }
   throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
