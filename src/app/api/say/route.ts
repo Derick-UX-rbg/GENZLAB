@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({
         replies: mockSay(body.vibe as Vibe, body.message),
         mock: true,
-        error: "Live AI hiccuped — showing demo replies.",
+        error: "All Gemini models busy — showing demo replies. Try again shortly.",
       } satisfies SayResponse);
     }
     return NextResponse.json(

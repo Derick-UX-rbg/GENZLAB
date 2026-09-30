@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({
         ideas: mockHustle(body),
         mock: true,
-        error: "Live AI hiccuped — showing demo ideas.",
+        error: "All Gemini models busy — showing demo ideas. Try again shortly.",
       } satisfies HustleResponse);
     }
     return NextResponse.json(

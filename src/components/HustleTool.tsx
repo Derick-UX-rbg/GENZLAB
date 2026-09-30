@@ -183,7 +183,7 @@ export function HustleTool() {
                 </div>
                 <div className="flex gap-1.5">
                   <CopyButton text={shareText} tool="hustle" />
-                  <ShareButton title={idea.title} text={shareText} tool="hustle" />
+                  <ShareButton title={idea.title} text={shareText} tool="hustle" preferWhatsApp />
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-white/70">{idea.idea}</p>
@@ -218,7 +218,7 @@ export function HustleTool() {
         })}
         {mock && ideas.length > 0 && (
           <p className="text-center text-[11px] text-amber-200/50">
-            Demo ideas — connect GEMINI_API_KEY for live tailored hustles.
+            Demo fallback — live AI was busy. Try again in a moment.
           </p>
         )}
       </div>

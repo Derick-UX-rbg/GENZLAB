@@ -228,6 +228,7 @@ export function ChargeTool() {
                     title="My rate estimate"
                     text={result.readyMessage}
                     tool="charge"
+                    preferWhatsApp
                   />
                 </div>
               </div>
@@ -238,7 +239,7 @@ export function ChargeTool() {
 
             {result.mock && (
               <p className="text-center text-[11px] text-amber-200/50">
-                Demo estimate — connect GEMINI_API_KEY for live AI pricing.
+                Demo fallback — live AI was busy. Try again in a moment.
               </p>
             )}
           </div>

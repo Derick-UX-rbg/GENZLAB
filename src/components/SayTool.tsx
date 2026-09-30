@@ -7,7 +7,7 @@ import { saveHistoryItem } from "@/lib/history";
 import type { SayReply, SayResponse, Vibe } from "@/lib/types";
 import { VIBES } from "@/tools/say/config";
 import { CopyButton } from "./CopyButton";
-import { ShareButton } from "./ShareButton";
+import { WhatsAppShareButton } from "./ShareButton";
 import { EmptyState, ErrorState, LoadingState } from "./States";
 import { HistoryPanel } from "./HistoryPanel";
 
@@ -134,7 +134,7 @@ export function SayTool() {
               </span>
               <div className="flex gap-1.5">
                 <CopyButton text={r.text} tool="say" />
-                <ShareButton title="GENZLAB reply" text={r.text} tool="say" />
+                <WhatsAppShareButton text={r.text} tool="say" />
               </div>
             </div>
             <p className="whitespace-pre-wrap text-sm leading-relaxed text-white/90">{r.text}</p>
@@ -143,7 +143,7 @@ export function SayTool() {
         ))}
         {mock && replies.length > 0 && (
           <p className="text-center text-[11px] text-amber-200/50">
-            Demo mode sample — connect GEMINI_API_KEY for live AI.
+            Demo fallback — live AI was busy. Try again in a moment.
           </p>
         )}
       </div>

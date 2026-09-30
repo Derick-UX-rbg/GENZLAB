@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { hasApiKey } from "@/lib/gemini";
+import { GEMINI_MODEL_CASCADE, hasApiKey } from "@/lib/gemini";
 
 export const runtime = "nodejs";
 
@@ -8,5 +8,6 @@ export async function GET() {
     ok: true,
     geminiConfigured: hasApiKey(),
     product: "GENZLAB",
+    modelCascade: GEMINI_MODEL_CASCADE,
   });
 }

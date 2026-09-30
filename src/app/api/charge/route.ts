@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({
         ...mockCharge(body),
         mock: true,
-        error: "Live AI hiccuped — showing estimate demo.",
+        error: "All Gemini models busy — showing estimate demo. Try again shortly.",
       } satisfies ChargeResponse);
     }
     return NextResponse.json(
