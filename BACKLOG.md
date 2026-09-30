@@ -5,6 +5,7 @@
 - What Should I Charge?
 - What Can I Hustle?
 - Situationship Translator
+- Why Is My Post Flopping?
 
 ## Not built yet
 - What Should I Post? — content ideas for IG/TikTok/Twitter NG

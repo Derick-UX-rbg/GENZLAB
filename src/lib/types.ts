@@ -76,10 +76,6 @@ export interface SituationshipRequest {
   chat: string;
 }
 
-export interface SituationshipFlag {
-  text: string;
-}
-
 export interface SituationshipReply {
   vibe: SituationshipReplyVibe;
   text: string;
@@ -95,7 +91,32 @@ export interface SituationshipResponse {
   error?: string;
 }
 
-export type ToolId = "say" | "charge" | "hustle" | "situationship";
+export type FlopPlatform = "Instagram" | "TikTok" | "Twitter/X" | "LinkedIn";
+
+export interface FlopRequest {
+  platform: FlopPlatform;
+  caption: string;
+  niche: string;
+  whatPosted?: string;
+  timing?: string;
+}
+
+export interface FlopRewrite {
+  label: string;
+  text: string;
+  why: string;
+}
+
+export interface FlopResponse {
+  diagnosis: string;
+  issues: string[];
+  rewrites: FlopRewrite[];
+  fixes: string[];
+  mock: boolean;
+  error?: string;
+}
+
+export type ToolId = "say" | "charge" | "hustle" | "situationship" | "flop";
 
 export interface HistoryItem {
   id: string;

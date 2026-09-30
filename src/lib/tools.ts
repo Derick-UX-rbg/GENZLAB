@@ -24,6 +24,17 @@ export const TOOLS: ToolMeta[] = [
     href: "/tools/situationship-translator",
   },
   {
+    id: "flop",
+    slug: "why-is-my-post-flopping",
+    name: "Why Is My Post Flopping?",
+    shortName: "Flopping?",
+    tagline: "Honest post autopsy",
+    description:
+      "Platform + caption + niche → diagnosis, 3 rewritten captions, and 3 concrete fixes for the next post.",
+    accent: "from-cyan-500/30 via-blue-500/10 to-transparent",
+    href: "/tools/why-is-my-post-flopping",
+  },
+  {
     id: "charge",
     slug: "what-should-i-charge",
     name: "What Should I Charge?",

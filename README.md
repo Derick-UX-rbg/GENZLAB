@@ -8,8 +8,9 @@ Tiny AI tools for real-life Nigerian problems.
 
 1. **What Do I Say?** — paste message + vibe → 3 Nigerian Gen-Z replies
 2. **Situationship Translator** — decode mixed signals + Soft / Direct / Soft-launch replies
-3. **What Should I Charge?** — pricing estimate + negotiation + ready message
-4. **What Can I Hustle?** — 5 realistic income experiments (no scams)
+3. **Why Is My Post Flopping?** — post autopsy + 3 rewrites + 3 fixes
+4. **What Should I Charge?** — pricing estimate + negotiation + ready message
+5. **What Can I Hustle?** — 5 realistic income experiments (no scams)
 
 ## Stack
 
