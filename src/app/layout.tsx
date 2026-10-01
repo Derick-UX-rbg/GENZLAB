@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
+import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "GENZLAB 🇳🇬 — Tiny AI tools for Nigerian Gen Z",
-  description:
-    "Money. Hustle. Dating. Content. Life. One problem at a time. Lightweight AI utilities for real-life Nigerian problems.",
-  metadataBase: new URL("https://genzlab.onrender.com"),
-  openGraph: {
-    title: "GENZLAB 🇳🇬",
-    description: "Tiny AI tools for real-life Nigerian problems.",
-    type: "website",
-  },
-};
+export const metadata: Metadata = rootMetadata;
 
 export default function RootLayout({
   children,

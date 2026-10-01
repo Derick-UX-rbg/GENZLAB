@@ -2,6 +2,14 @@ import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
 import { ToolCard } from "@/components/ToolCard";
 import { TOOLS } from "@/lib/tools";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "GENZLAB 🇳🇬 — Tiny AI tools for Nigerian Gen Z",
+  description:
+    "Money. Hustle. Dating. Content. Life. One problem at a time. Lightweight AI utilities for real-life Nigerian problems.",
+  path: "/",
+});
 
 export default function HomePage() {
   return (
